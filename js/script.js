@@ -14,21 +14,21 @@ loginButton.addEventListener("click",
         // RECUPERO IL VALUE DELL'INPUT
         const valueEmail = emailInput.value;
         // COSTITUSICO VARIABILE D'APPOGGIO
-        let correctEmail = false
+        let correctEmail = false;
 
         //CONTROLLO SE VALUE DELL'INPUT CORRISPONDE AD UNO DEGLI ELEMENTI IN ARRAY 
         for (let i = 0; i < emailList.length; i++){
             // SE CORRISPONDE CAMBIO LA VARIABILE D'APPOGGIO
             if(valueEmail === emailList[i]){
-                correctEmail = true
+                correctEmail = true;
             }
         }
         // ESITO
         if(correctEmail){
-            alert("Hai inserito la email corretta");
+            alert("Welcome, your mail is valid!");
         }
         else{
-            alert("Mail sbagliata");
+            alert("Your e-mail is not registered. Please try again.");
         }
     }
 )
