@@ -46,20 +46,21 @@ const GameWinner = document.getElementById('winner');
 // AL CLICK DEL BOTTONE INIZIO IL GIOCO
 playButton.addEventListener("click",
     function(){
-
+        //  RANDOMIZZO UN NUMERO DA 1 A 6 PER L'UTENTE E PER IL PC
         const randomNumber = Math.floor(Math.random() * 6) + 1;
         const CPURandomNumber = Math.floor(Math.random() * 6) + 1;
 
-        
+        // INSERISCO I NUMERI RANDOMIZZATI NELL'ELEMENTO DEL DOM
         userNumber.innerText = ` ${CPURandomNumber}`;
         CPUNumber.innerText = ` ${randomNumber}`;
-        
+        // STABILISCO CONDIZIONI DI VINCITA
         if(randomNumber > CPURandomNumber){
             GameWinner.innerText = ` Ha vinto il PC con ${randomNumber}`
         }
         else if(randomNumber < CPURandomNumber){
             GameWinner.innerText = ` Ha vinto il Giocatore con ${CPURandomNumber}`
         }
+        //STABILISCO CONDIZIONE DI PAREGGIO
         else if(randomNumber == CPURandomNumber){
             GameWinner.innerText = ` PAREGGIO`
         }
